@@ -11,11 +11,16 @@ public class FirstPersonController : MonoBehaviour
     [Header("References")]
     public Transform cameraTransform;
 
+    [Header("Cursor")]
+    public Texture2D defaultCursor, clickableCursor;
+
     private CharacterController controller;
     private PlayerInputActions input;
     private Vector2 moveInput;
     private Vector2 lookInput;
     private float cameraPitch = 0f;
+
+    bool clickable = false;
 
     private void Awake()
     {
@@ -31,7 +36,29 @@ public class FirstPersonController : MonoBehaviour
         input.Player.Look.canceled += _ => lookInput = Vector2.zero;
     }
 
-    private void Update()
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    void OnGUI()
+    {
+        if (!clickable)
+        {
+            float x = (Screen.width - defaultCursor.width) / 2;
+            float y = (Screen.height - defaultCursor.height) / 2;
+            GUI.DrawTexture(new Rect(x, y, defaultCursor.width, defaultCursor.height), defaultCursor);
+        }
+        else
+        {
+            float x = (Screen.width - clickableCursor.width) / 2;
+            float y = (Screen.height - clickableCursor.height) / 2;
+            GUI.DrawTexture(new Rect(x, y, clickableCursor.width, clickableCursor.height), clickableCursor);
+        }
+    }
+
+    void Update()
     {
         // Movement
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
@@ -46,5 +73,30 @@ public class FirstPersonController : MonoBehaviour
 
         cameraTransform.localRotation = Quaternion.Euler(cameraPitch, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
+
+
+        // FPS Interact Raycast
+        Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 3f)) // 3f = alcance do olhar
+        {
+            if (hit.collider.GetComponent<Interactable>() != null)
+            {
+                clickable = true;
+                if (Keyboard.current.eKey.wasPressedThisFrame)
+                {
+                    hit.collider.GetComponent<Interactable>().Interact();
+                }
+            }
+            else
+            {
+                clickable = false;
+            }
+        }
+        else
+        {
+            clickable = false;
+        }
     }
+
 }
