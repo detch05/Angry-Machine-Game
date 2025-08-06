@@ -8,7 +8,11 @@ public class FirstPersonController : MonoBehaviour
     public float moveSpeed = 5f;
     public float mouseSensitivity = 1f;
 
+    [Header("Gravity")]
+    public float gravity = -9.81f;
+
     [Header("References")]
+
     public Transform cameraTransform;
 
     [Header("Cursor")]
@@ -21,12 +25,15 @@ public class FirstPersonController : MonoBehaviour
     private float cameraPitch = 0f;
 
     bool clickable = false;
+     private Vector3 velocity;
+    private bool isGrounded;
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
 
         input = new PlayerInputActions();
+
         input.Player.Enable();
 
         input.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
@@ -60,9 +67,21 @@ public class FirstPersonController : MonoBehaviour
 
     void Update()
     {
+        isGrounded = controller.isGrounded;
+
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f; // small downward force to keep grounded
+        }
+
         // Movement
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
         controller.Move(move * moveSpeed * Time.deltaTime);
+
+                // Apply gravity
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
+        
 
         // Look
         float mouseX = lookInput.x * mouseSensitivity;
