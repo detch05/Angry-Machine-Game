@@ -1,0 +1,66 @@
+# File exported by Pixologic 3D Print Exporter for ZBrush
+# http://www.pixologic.com
+
+newmtl mat0
+Kd 1.0 1.0 1.0
+Ks 1.0 1.0 1.0
+Ns 100
+d 1.0
+illum 2
+map_Kd OrchidTex1.jpg
+
+newmtl mat1
+Kd 1.0 1.0 1.0
+Ks 1.0 1.0 1.0
+Ns 100
+d 1.0
+illum 2
+map_Kd OrchidTex2.jpg
+
+newmtl mat2
+Kd 1.0 1.0 1.0
+Ks 1.0 1.0 1.0
+Ns 100
+d 1.0
+illum 2
+map_Kd OrchidTex3.jpg
+
+newmtl mat3
+Kd 1.0 1.0 1.0
+Ks 1.0 1.0 1.0
+Ns 100
+d 1.0
+illum 2
+map_Kd OrchidTex4.jpg
+
+newmtl mat4
+Kd 1.0 1.0 1.0
+Ks 1.0 1.0 1.0
+Ns 100
+d 1.0
+illum 2
+map_Kd OrchidTex5.jpg
+
+newmtl mat5
+Kd 1.0 1.0 1.0
+Ks 1.0 1.0 1.0
+Ns 100
+d 1.0
+illum 2
+map_Kd OrchidTex6.jpg
+
+newmtl mat6
+Kd 1.0 1.0 1.0
+Ks 1.0 1.0 1.0
+Ns 100
+d 1.0
+illum 2
+map_Kd OrchidTex7.jpg
+
+newmtl mat7
+Kd 1.0 1.0 1.0
+Ks 1.0 1.0 1.0
+Ns 100
+d 1.0
+illum 2
+map_Kd OrchidTex8.jpg
