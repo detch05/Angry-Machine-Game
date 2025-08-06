@@ -751,6 +751,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01760001, y: 0.021000009, z: 0.04152582}
   m_Center: {x: 0, y: -0.00050000387, z: 0.020737102}
+--- !u!114 &793226645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793226637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afc26b251ecbf14cb9708003adf5557d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &793405082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1286,6 +1298,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e68f3a4931924e4a95a05ba181a7934, type: 3}
       insertIndex: -1
       addedObject: {fileID: 793226641}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e68f3a4931924e4a95a05ba181a7934, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 793226645}
   m_SourcePrefab: {fileID: 100100000, guid: 4e68f3a4931924e4a95a05ba181a7934, type: 3}
 --- !u!114 &1091783065
 MonoBehaviour:
@@ -2573,9 +2588,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   mouseSensitivity: 1
+  gravity: -9.81
   cameraTransform: {fileID: 825706436}
-  defaultCursor: {fileID: 0}
-  clickableCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: 8543353f04a862e84b3ab8dabe26c709, type: 3}
+  clickableCursor: {fileID: 2800000, guid: 324fffdcad87ece068688b7e0be9f31c, type: 3}
 --- !u!143 &2015645419
 CharacterController:
   m_ObjectHideFlags: 0
