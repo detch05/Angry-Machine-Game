@@ -25,7 +25,7 @@ public class FirstPersonController : MonoBehaviour
     private float cameraPitch = 0f;
 
     bool clickable = false;
-     private Vector3 velocity;
+    private Vector3 velocity;
     private bool isGrounded;
 
     private void Awake()
@@ -78,10 +78,10 @@ public class FirstPersonController : MonoBehaviour
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
         controller.Move(move * moveSpeed * Time.deltaTime);
 
-                // Apply gravity
+        // Apply gravity
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
-        
+
 
         // Look
         float mouseX = lookInput.x * mouseSensitivity;
@@ -107,6 +107,25 @@ public class FirstPersonController : MonoBehaviour
                     hit.collider.GetComponent<Interactable>().Interact();
                 }
             }
+
+            else if(hit.collider.GetComponent<Interactable1>() != null)
+            {
+                clickable = true;
+                if (Keyboard.current.eKey.wasPressedThisFrame)
+                {
+                    hit.collider.GetComponent<Interactable1>().IntPC1();
+                }
+            }
+
+            else if (hit.collider.GetComponent<Interactable2>() != null)
+            {
+                clickable = true;
+                if (Keyboard.current.eKey.wasPressedThisFrame)
+                {
+                    hit.collider.GetComponent<Interactable2>().IntPC2();
+                }
+            }
+
             else
             {
                 clickable = false;
@@ -117,5 +136,5 @@ public class FirstPersonController : MonoBehaviour
             clickable = false;
         }
     }
-
 }
+

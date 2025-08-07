@@ -8,3 +8,4 @@ public class Interactable : MonoBehaviour
         Debug.Log("Interagiu com: " + gameObject.name);
     }
 }
+
