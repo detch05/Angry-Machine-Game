@@ -340,6 +340,8 @@ GameObject:
   - component: {fileID: 136003413}
   - component: {fileID: 136003412}
   - component: {fileID: 136003411}
+  - component: {fileID: 136003416}
+  - component: {fileID: 136003415}
   m_Layer: 0
   m_Name: PlantScreen
   m_TagString: Untagged
@@ -437,6 +439,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1119199600}
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
+--- !u!114 &136003415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136003410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4c94f46a14874cc84cbd680d1d97e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiPanel: {fileID: 0}
+--- !u!65 &136003416
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136003410}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000001, y: 0.00000035575468, z: 10}
+  m_Center: {x: 0.00012207031, y: 0.00012207031, z: 0}
 --- !u!1001 &152146841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1251,6 +1287,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01760001, y: 0.021000009, z: 0.04152582}
   m_Center: {x: 0, y: -0.00050000387, z: 0.020737102}
+--- !u!114 &793226645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793226637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afc26b251ecbf14cb9708003adf5557d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiPanel: {fileID: 0}
 --- !u!114 &793405082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1567,6 +1616,8 @@ GameObject:
   - component: {fileID: 884059256}
   - component: {fileID: 884059255}
   - component: {fileID: 884059254}
+  - component: {fileID: 884059258}
+  - component: {fileID: 884059257}
   m_Layer: 0
   m_Name: StartScreen
   m_TagString: Untagged
@@ -1664,6 +1715,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884059252}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &884059257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884059252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cebe9c5628d48fc5b51b0a9f4e360f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiPanel: {fileID: 0}
+--- !u!65 &884059258
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884059252}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.000002, y: 0.00000014288922, z: 10}
+  m_Center: {x: 0.00012207031, y: -0.00012207031, z: 0}
 --- !u!114 &909071669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2137,6 +2222,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e68f3a4931924e4a95a05ba181a7934, type: 3}
       insertIndex: -1
       addedObject: {fileID: 793226641}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e68f3a4931924e4a95a05ba181a7934, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 793226645}
   m_SourcePrefab: {fileID: 100100000, guid: 4e68f3a4931924e4a95a05ba181a7934, type: 3}
 --- !u!114 &1091783065
 MonoBehaviour:
