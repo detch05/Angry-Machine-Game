@@ -1,12 +1,14 @@
 using UnityEngine;
+using UnityEngine.InputSystem; // New Input System namespace
 
 public class Interactable : MonoBehaviour
 {
-    public GameObject uiPanel;  // assign in inspector if this object has a UI to open
+    public GameObject uiPanel;  // assign in inspector
+    public static bool isUIOpen = false;
 
     public virtual void Interact()
     {
-        Debug.Log("Interagiu com: " + gameObject.name);
+        Debug.Log("Interacted with: " + gameObject.name);
 
         if (uiPanel != null)
         {
@@ -14,6 +16,19 @@ public class Interactable : MonoBehaviour
             Cursor.visible = true;
 
             uiPanel.SetActive(true);
+            isUIOpen = true;
+        }
+    }
+
+    void Update()
+    {
+        // Use the new Input System to detect ESC
+        if (isUIOpen && Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            uiPanel.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            isUIOpen = false;
         }
     }
 }
