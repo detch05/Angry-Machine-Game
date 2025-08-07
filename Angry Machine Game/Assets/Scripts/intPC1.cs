@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Interactable1: MonoBehaviour
 {
@@ -12,13 +13,13 @@ public class Interactable1: MonoBehaviour
         if (uiPanel != null)
         {
             uiPanel.SetActive(true);
-            isPanelOpen = true;
+            isPanelOpen = true;     
         }
     }
 
     void Update()
     {
-        if (isPanelOpen && Input.GetKeyDown(KeyCode.Escape))
+        if (isPanelOpen && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if (uiPanel != null)
             {
