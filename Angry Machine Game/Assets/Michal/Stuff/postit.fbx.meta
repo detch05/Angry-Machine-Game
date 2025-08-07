@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: 071c81c36f2ba2644a37244697ded0d8
+guid: ed776d2d3789a3442ac3ad9db85fa069
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: banana
-    second: {fileID: 2100000, guid: 4863daa8960e5ad4eb426502bcd56054, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: outline
-    second: {fileID: 2100000, guid: d4f2ca9276ea3d3468fe98a5563bf921, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
