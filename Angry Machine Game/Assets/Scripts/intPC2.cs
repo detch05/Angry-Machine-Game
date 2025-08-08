@@ -12,6 +12,8 @@ public class Interactable2: MonoBehaviour
         Debug.Log("Interagiu com: " + gameObject.name);
         if (uiPanel != null)
         {
+            GameState.isAnyScreenOpen = true;
+
             uiPanel.SetActive(true);
             isPanelOpen = true;
         }
@@ -23,6 +25,8 @@ public class Interactable2: MonoBehaviour
         {
             if (uiPanel != null)
             {
+                GameState.isAnyScreenOpen = false;
+                
                 uiPanel.SetActive(false);
                 isPanelOpen = false;
             }

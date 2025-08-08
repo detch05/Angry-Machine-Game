@@ -51,17 +51,20 @@ public class FirstPersonController : MonoBehaviour
 
     void OnGUI()
     {
-        if (!clickable)
+        if (!GameState.isAnyScreenOpen)
         {
-            float x = (Screen.width - defaultCursor.width) / 2;
-            float y = (Screen.height - defaultCursor.height) / 2;
-            GUI.DrawTexture(new Rect(x, y, defaultCursor.width, defaultCursor.height), defaultCursor);
-        }
-        else
-        {
-            float x = (Screen.width - clickableCursor.width) / 2;
-            float y = (Screen.height - clickableCursor.height) / 2;
-            GUI.DrawTexture(new Rect(x, y, clickableCursor.width, clickableCursor.height), clickableCursor);
+            if (!clickable)
+            {
+                float x = (Screen.width - defaultCursor.width) / 2;
+                float y = (Screen.height - defaultCursor.height) / 2;
+                GUI.DrawTexture(new Rect(x, y, defaultCursor.width, defaultCursor.height), defaultCursor);
+            }
+            else
+            {
+                float x = (Screen.width - clickableCursor.width) / 2;
+                float y = (Screen.height - clickableCursor.height) / 2;
+                GUI.DrawTexture(new Rect(x, y, clickableCursor.width, clickableCursor.height), clickableCursor);
+            }
         }
     }
 
@@ -84,14 +87,17 @@ public class FirstPersonController : MonoBehaviour
 
 
         // Look
-        float mouseX = lookInput.x * mouseSensitivity;
-        float mouseY = lookInput.y * mouseSensitivity;
+        if (!GameState.isAnyScreenOpen)
+        {
+            float mouseX = lookInput.x * mouseSensitivity;
+            float mouseY = lookInput.y * mouseSensitivity;
 
         cameraPitch -= mouseY;
         cameraPitch = Mathf.Clamp(cameraPitch, -90f, 90f);
 
         cameraTransform.localRotation = Quaternion.Euler(cameraPitch, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
+        }
 
 
         // FPS Interact Raycast

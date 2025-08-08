@@ -5,6 +5,8 @@ public class KeypadInput : MonoBehaviour
 {
     public TMP_Text displayText;
 
+    public GameObject uiPanel;
+
     private string currentInput = "";
     private int currentCodeIndex = 0;
 
@@ -50,7 +52,16 @@ public class KeypadInput : MonoBehaviour
             if (currentCodeIndex < objectsToActivate.Length)
                 objectsToActivate[currentCodeIndex].SetActive(true);
 
+            // Fecha o painel ao acertar o código
+            if (uiPanel != null)
+                uiPanel.SetActive(false);
+
             currentCodeIndex++;
+
+            if (currentCodeIndex == 3)
+            {
+                // end screen
+            }
         }
         else
         {

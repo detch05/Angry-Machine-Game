@@ -12,6 +12,8 @@ public class Interactable : MonoBehaviour
 
         if (uiPanel != null)
         {
+            GameState.isAnyScreenOpen = true;
+
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
@@ -25,6 +27,8 @@ public class Interactable : MonoBehaviour
         // Use the new Input System to detect ESC
         if (isUIOpen && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
+            GameState.isAnyScreenOpen = false;
+            
             uiPanel.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
