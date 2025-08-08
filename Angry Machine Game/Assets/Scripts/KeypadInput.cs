@@ -1,5 +1,7 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class KeypadInput : MonoBehaviour
 {
@@ -60,7 +62,7 @@ public class KeypadInput : MonoBehaviour
 
             if (currentCodeIndex == 3)
             {
-                // end screen
+                StartCoroutine(LoadSceneAfterDelay(5f)); // Start the coroutine to wait and load the scene
             }
         }
         else
@@ -69,5 +71,15 @@ public class KeypadInput : MonoBehaviour
         }
 
         currentInput = "";
+    }
+
+    private IEnumerator LoadSceneAfterDelay(float delay)
+
+    {
+
+        yield return new WaitForSeconds(delay); // Wait for the specified time
+
+        SceneManager.LoadSceneAsync(3); // Load the next scene
+
     }
 }
