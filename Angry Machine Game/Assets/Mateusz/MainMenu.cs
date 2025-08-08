@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     }
     public void GotoAuthors()
     {
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync(2);
     }
     public void ExitGame()
     {

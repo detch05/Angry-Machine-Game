@@ -7,6 +7,6 @@ public class Authors : MonoBehaviour
 
     public void GotoMainMenu()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(0);
     }
 }
