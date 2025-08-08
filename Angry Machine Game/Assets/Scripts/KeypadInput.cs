@@ -44,7 +44,7 @@ public class KeypadInput : MonoBehaviour
 
         if (currentInput == correctCodes[currentCodeIndex])
         {
-            displayText.text = "Correct!";
+            displayText.text = "Enter the code.";
 
             // Deactivate previous object
             if (currentCodeIndex < objectsToDeactivate.Length)
@@ -56,13 +56,22 @@ public class KeypadInput : MonoBehaviour
 
             // Fecha o painel ao acertar o código
             if (uiPanel != null)
+            {
                 uiPanel.SetActive(false);
+                GameState.isAnyScreenOpen = false;
+
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            
 
             currentCodeIndex++;
 
             if (currentCodeIndex == 3)
             {
-                StartCoroutine(LoadSceneAfterDelay(5f)); // Start the coroutine to wait and load the scene
+                StartCoroutine(LoadSceneAfterDelay(3f));
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true; // Start the coroutine to wait and load the scene
             }
         }
         else
