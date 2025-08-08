@@ -237,7 +237,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 164386479}
         m_TargetAssemblyTypeName: KeypadInput, Assembly-CSharp
         m_MethodName: OnNumberButtonClick
         m_Mode: 5
@@ -450,7 +450,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 164386479}
         m_TargetAssemblyTypeName: KeypadInput, Assembly-CSharp
         m_MethodName: OnNumberButtonClick
         m_Mode: 5
@@ -875,7 +875,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 164386479}
         m_TargetAssemblyTypeName: KeypadInput, Assembly-CSharp
         m_MethodName: OnSubmitButtonClick
         m_Mode: 1
@@ -947,7 +947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 434c78140762a8e40b95e28eecb272cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.16941833
+      value: 0.18599701
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 434c78140762a8e40b95e28eecb272cf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1330,7 +1330,7 @@ Transform:
   m_GameObject: {fileID: 216186713}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 84.19386, y: 15.33961, z: 69.56418}
+  m_LocalPosition: {x: 84.21, y: 15.33961, z: 69.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1362,7 +1362,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.2, y: 0, z: 0.7}
 --- !u!1 &279763642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,7 +1719,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 164386479}
         m_TargetAssemblyTypeName: KeypadInput, Assembly-CSharp
         m_MethodName: OnNumberButtonClick
         m_Mode: 5
@@ -2198,7 +2198,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 164386479}
         m_TargetAssemblyTypeName: KeypadInput, Assembly-CSharp
         m_MethodName: OnNumberButtonClick
         m_Mode: 5
@@ -3820,7 +3820,7 @@ Transform:
   m_GameObject: {fileID: 630878354}
   serializedVersion: 2
   m_LocalRotation: {x: 0.016165795, y: -0.706922, z: 0.706922, w: 0.016165795}
-  m_LocalPosition: {x: 84.169, y: 15.46, z: 69.946}
+  m_LocalPosition: {x: 84.213, y: 15.46, z: 70.298}
   m_LocalScale: {x: 0.10000002, y: 0.099999994, z: 0.10000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3894,7 +3894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffafb7fcaccff8b438835690aa1c0ab2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.16941833
+      value: 0.18599701
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffafb7fcaccff8b438835690aa1c0ab2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3967,7 +3967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4015fa79ae2838a4aa2115ba46a75c90, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.16941833
+      value: 0.186
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4015fa79ae2838a4aa2115ba46a75c90, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4210,7 +4210,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 164386479}
         m_TargetAssemblyTypeName: KeypadInput, Assembly-CSharp
         m_MethodName: OnNumberButtonClick
         m_Mode: 5
@@ -4688,7 +4688,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 164386479}
         m_TargetAssemblyTypeName: KeypadInput, Assembly-CSharp
         m_MethodName: OnNumberButtonClick
         m_Mode: 5
@@ -5639,7 +5639,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 164386479}
         m_TargetAssemblyTypeName: KeypadInput, Assembly-CSharp
         m_MethodName: OnNumberButtonClick
         m_Mode: 5
@@ -6286,7 +6286,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 164386479}
         m_TargetAssemblyTypeName: KeypadInput, Assembly-CSharp
         m_MethodName: OnClearButtonClick
         m_Mode: 1
@@ -6419,7 +6419,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 164386479}
         m_TargetAssemblyTypeName: KeypadInput, Assembly-CSharp
         m_MethodName: OnNumberButtonClick
         m_Mode: 5
@@ -8086,7 +8086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5674171321753758976, guid: cb1f0bb16a7022a46904537c5d40a73c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 69.812
+      value: 70.159
       objectReference: {fileID: 0}
     - target: {fileID: 5674171321753758976, guid: cb1f0bb16a7022a46904537c5d40a73c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8541,7 +8541,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 164386479}
         m_TargetAssemblyTypeName: KeypadInput, Assembly-CSharp
         m_MethodName: OnNumberButtonClick
         m_Mode: 5
@@ -9111,7 +9111,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 164386479}
         m_TargetAssemblyTypeName: KeypadInput, Assembly-CSharp
         m_MethodName: OnNumberButtonClick
         m_Mode: 5
@@ -9839,7 +9839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 95bc4e1e218bf2d46b7a29e33c2b63b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.16941833
+      value: 0.18599701
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 95bc4e1e218bf2d46b7a29e33c2b63b6, type: 3}
       propertyPath: m_LocalPosition.y
